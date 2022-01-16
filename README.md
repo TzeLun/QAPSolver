@@ -73,7 +73,7 @@ Restart SA for number of times using the previous best solution
 simulatedAnnealing(initial, 1, 100.0, 0.01, 0.85, "geometric", 100);
 ```
 #### 5. Random Genetic Algorithm
-Key features:
+* Key features:
 	* Initial population created randomly using the same iterative random generator
 	* Two parents are selected randomly for crossover
 	* Each crossover is a single random pair-wise exchange of genes between two parents, however reciprocation of exchange is needed since no repeatability of genes
@@ -91,7 +91,7 @@ Key features:
 GA(10000, 50, 0.5, 2, 2, 100);
 ```
 #### 6. Tabu Search
-Key features:
+* Key features:
 	* Tabu attribute - the move operator (a 2-Opt pair-wise exchange of facilities) and its mirror opposite (ie : swap(2, 3) and swap(3, 2))
 	* Aspiration criterion - aspiration by objective function, revoke tabu-active status if tabu moves yield better solution
 	* Tabu tenure - random-dynamic tabu tenure, given a range of tenure values, moves are tabu-ed for a tenure assigned sequentially. Once end of sequence is reached, randomly shuffle the tabu tenures to get a new sequence.
