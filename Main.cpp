@@ -1,6 +1,6 @@
 /*****************************************************************************************
-** Quadratic Assignment Problem Solver													**
-** Written by Lok Tze Lun, last updated on 5-1-2022										**
+** Quadratic Assignment Problem Solver							**
+** Written by Lok Tze Lun, last updated on 5-1-2022					**
 ******************************************************************************************/
 
 
@@ -37,19 +37,19 @@ int main() {
 	QAPSolver model(&F, &D, &size);
 
 	// tuning and evaluation bench :
-	int instances = 100;																	// change this if want to run for more iterations to get better averages
-	int optimumVal = 6922;																	// the value of the global optimum, change this if using different problem instances
+	int instances = 100;								// change this if want to run for more iterations to get better averages
+	int optimumVal = 6922;								// the value of the global optimum, change this if using different problem instances
 	int count = 1;
-	double avg_deviation = 0.0;																// average deviation from the optimum solution
-	double avg_solution = 0.0;																// average solution after restarting for n times
-	double avg_runtime = 0.0;																// average run time including the initial solution generation
-	std::vector<int> bestSol;																// store the best solution out of all the solutions from every restart
-	int bestVal = 2000000000;																// store the objective function value of the best solution
-	int frequency = 0;																		// count how frequent the optimum solution is found
+	double avg_deviation = 0.0;							// average deviation from the optimum solution
+	double avg_solution = 0.0;							// average solution after restarting for n times
+	double avg_runtime = 0.0;							// average run time including the initial solution generation
+	std::vector<int> bestSol;							// store the best solution out of all the solutions from every restart
+	int bestVal = 2000000000;							// store the objective function value of the best solution
+	int frequency = 0;								// count how frequent the optimum solution is found
 
 
 	while (count <= instances) {
-		model.genInitSol("random", &initial, 100);											// comment this out if using GA
+		model.genInitSol("random", &initial, 100);				// comment this out if using GA
 		model.GA(10000, 200, 0.5, 2, 2, 100);
 		//model.simulatedAnnealing(initial, 100, 100.0, 0.01, 0.85, "geometric", 50);
 		//model.LocalSearchDynOpt(initial, false, "3-opt");
