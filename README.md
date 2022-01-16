@@ -81,8 +81,8 @@ simulatedAnnealing(initial, 1, 100.0, 0.01, 0.85, "geometric", 100);
 	* Offspring is added into the population by either:
   		* Offspring has lower cost (better fitness) than the weakest (highest cost) existing chromosomes
   		* Otherwise, offpsring still replace that chromosome at a probability that varies with the progress in the experiment
-	* The probability of acceptance starts at 1.0, and decrease by 0.25 at a period of every one-fifth of the total number of generations <br />
-**Note :** When using GA, don't have to generate the initial solution manually!
+	* The probability of acceptance starts at 1.0, and decrease by 0.25 at a period of every one-fifth of the total number of generations
+* **Note :** When using GA, don't have to generate the initial solution manually!
 ```C++
 // First argument : number of generations, second argument : population size
 // Third argument : mutation rate (probability), Fourth argument : Number of crossover switches per generation
@@ -94,7 +94,6 @@ GA(10000, 50, 0.5, 2, 2, 100);
 	* Tabu attribute - the move operator (a 2-Opt pair-wise exchange of facilities) and its mirror opposite (ie : swap(2, 3) and swap(3, 2))
 	* Aspiration criterion - aspiration by objective function, revoke tabu-active status if tabu moves yield better solution
 	* Tabu tenure - random-dynamic tabu tenure, given a range of tenure values, moves are tabu-ed for a tenure assigned sequentially. Once end of sequence is reached, randomly shuffle the tabu tenures to get a new sequence.
-<br />
 ```C++
 // Second argument : Number of iterations, number of times the tabu search is run
 // Third argument : minimum tabu tenure, Fourth argument : maximum tabu tenure
