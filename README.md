@@ -63,7 +63,8 @@ LocalSearch3Opt(initial, false);  // Second argument dictates if the algorithm u
 // Third argument dictates whether the algorithm should start the search with 2-Opt or 3-Opt
 LocalSearchDynOpt(initial, false, "3-opt");
 ```
-#### 4. Simulated Annealing with Restarts - restart SA for number of times using the previous best solution
+#### 4. Simulated Annealing with Restarts
+Restart SA for number of times using the previous best solution
 ```C++
 // Second Argument : Number of restarts, Third Argument : Initial temperature
 // Fourth Argument : Final temperature, Fifth Argument : Annealing Schedule, alpha
@@ -72,15 +73,15 @@ LocalSearchDynOpt(initial, false, "3-opt");
 simulatedAnnealing(initial, 1, 100.0, 0.01, 0.85, "geometric", 100);
 ```
 #### 5. Random Genetic Algorithm
-Key features:
-	1. Initial population created randomly using the same iterative random generator
-	2. Two parents are selected randomly for crossover
-	3. Each crossover is a single random pair-wise exchange of genes between two parents, however reciprocation of exchange is needed since no repeatability of genes
-	4. Occurence of mutation is probabilistic, each mutation is a local pair-wise exhange of genes
-	5. Offspring is added into the population by either:
-  		A. Offspring has lower cost (better fitness) than the weakest (highest cost) existing chromosomes
-  		B. Otherwise, offpsring still replace that chromosome at a probability that varies with the progress in the experiment
-	6. The probability of acceptance starts at 1.0, and decrease by 0.25 at a period of every one-fifth of the total number of generations
+* Key features:
+	* Initial population created randomly using the same iterative random generator
+	* Two parents are selected randomly for crossover
+	* Each crossover is a single random pair-wise exchange of genes between two parents, however reciprocation of exchange is needed since no repeatability of genes
+	* Occurence of mutation is probabilistic, each mutation is a local pair-wise exhange of genes
+	* Offspring is added into the population by either:
+  		* Offspring has lower cost (better fitness) than the weakest (highest cost) existing chromosomes
+  		* Otherwise, offpsring still replace that chromosome at a probability that varies with the progress in the experiment
+	* The probability of acceptance starts at 1.0, and decrease by 0.25 at a period of every one-fifth of the total number of generations
 **Note :** When using GA, don't have to generate the initial solution manually!
 ```C++
 // First argument : number of generations, second argument : population size
@@ -89,10 +90,10 @@ Key features:
 GA(10000, 50, 0.5, 2, 2, 100);
 ```
 #### 6. Tabu Search
-Key features:
-	1. Tabu attribute - the move operator (a 2-Opt pair-wise exchange of facilities) and its mirror opposite (ie : swap(2, 3) and swap(3, 2))
-	2. Aspiration criterion - aspiration by objective function, revoke tabu-active status if tabu moves yield better solution
-	3. Tabu tenure - random-dynamic tabu tenure, given a range of tenure values, moves are tabu-ed for a tenure assigned sequentially. Once end of sequence is reached, randomly shuffle the tabu tenures to get a new sequence.
+* Key features:
+	* Tabu attribute - the move operator (a 2-Opt pair-wise exchange of facilities) and its mirror opposite (ie : swap(2, 3) and swap(3, 2))
+	* Aspiration criterion - aspiration by objective function, revoke tabu-active status if tabu moves yield better solution
+	* Tabu tenure - random-dynamic tabu tenure, given a range of tenure values, moves are tabu-ed for a tenure assigned sequentially. Once end of sequence is reached, randomly shuffle the tabu tenures to get a new sequence.
 ```C++
 // Second argument : Number of iterations, number of times the tabu search is run
 // Third argument : minimum tabu tenure, Fourth argument : maximum tabu tenure
