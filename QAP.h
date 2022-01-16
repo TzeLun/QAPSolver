@@ -1,6 +1,6 @@
 /*****************************************************************************************
-** Quadratic Assignment Problem Solver													**
-** Written by Lok Tze Lun, last updated on 5-1-2022										**
+** Quadratic Assignment Problem Solver							**
+** Written by Lok Tze Lun, last updated on 5-1-2022					**
 ******************************************************************************************/
 
 #include <iostream>
