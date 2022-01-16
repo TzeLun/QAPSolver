@@ -81,10 +81,8 @@ simulatedAnnealing(initial, 1, 100.0, 0.01, 0.85, "geometric", 100);
 	* Offspring is added into the population by either:
   		* Offspring has lower cost (better fitness) than the weakest (highest cost) existing chromosomes
   		* Otherwise, offpsring still replace that chromosome at a probability that varies with the progress in the experiment
-	* The probability of acceptance starts at 1.0, and decrease by 0.25 at a period of every one-fifth of the total number of generations
-<br />
+	* The probability of acceptance starts at 1.0, and decrease by 0.25 at a period of every one-fifth of the total number of generations <br />
 **Note :** When using GA, don't have to generate the initial solution manually!
-<br />
 ```C++
 // First argument : number of generations, second argument : population size
 // Third argument : mutation rate (probability), Fourth argument : Number of crossover switches per generation
