@@ -264,7 +264,6 @@ class QAPSolver {
 			std::vector<int> fitness;
 			std::vector<int> arr(n);
 
-			// Generating initial solution/population for the GA -- Not considered as part of the runtime of GA
 			// generate the population according to the input population size
 			for (unsigned int i = 0; i < n; i++) {
 				arr[i] = int(i + 1);
