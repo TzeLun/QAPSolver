@@ -1,6 +1,7 @@
 # QAPSolver
 
-A simple and intuitive Quadratic Assignment Problem solver for C++.
+A simple and intuitive Quadratic Assignment Problem solver for C++. </br>
+Added a technical but comprehensive [report](https://github.com/TzeLun/QAPSolver/blob/main/QAP%20report.pdf) on evaluation/comparison simulations on the various heuristics/metaheuristics available in this library. Encourage fellow enthusiasts to read the report.
 
 ## How to use?
 Add all the necessary header and cpp files into your Visual Studio project (or any other directory) and copy the the code from the demo.cpp to get started.
